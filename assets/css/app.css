@@ -31,22 +31,29 @@ body {
 .random-result {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 150px;
+    justify-content: center;
+    height: 100px;
     margin: 30px 0;
 }
-.random-result span {
+.random-result-container span {
     display: block;
     width: 100%;
     text-align: center;
 }
+.random-result-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 .fail {
+    width: 50%;
     color: #ff0000;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
 .win {
+    width: 50%;
     color: blue;
     font-size: 24px;
     font-weight: bold;

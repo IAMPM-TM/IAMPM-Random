@@ -23,15 +23,17 @@
       </select>
     </div>
     <div class="random-result">
-      <div class="fail">
-        <span>Зрада</span>
-        20%
+      <div style="display:none" id="result" class="random-result-container">
+        <div class="fail">
+          <span>Зрада</span>
+          <span id="fail">20%</span>
+        </div>
+        <div class="win">
+          <span>Перемога</span>
+          <span id="win">80%</span>
+        </div>
       </div>
-      <div class="win">
-        <span>Перемога</span>
-        80%
-      </div>
-      <div style="display:none" class="dice">
+      <div style="display:none" class="dice" id="dice">
         <div class="front">
             <span></span>
             <span></span>
@@ -68,10 +70,10 @@
       </div>
     </div>
     <div class="random-actions">
-      <button type="button">Кинуть кубики ;)</button>
+      <button type="button" onclick="calculate()">Кинуть кубики ;)</button>
     </div>
   </div>  
 
-  <script src="src/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
