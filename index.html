@@ -4,10 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>IAMPM Random</title>
+
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
-  
+
+  <div class="random-container">
+    <img src="http://iampm.club/wp-content/uploads/2015/04/logo-small.png" alt="IAMPM">
+    <div class="random-container-input">
+      <label for="team-level">Выберите уровень команды</label>
+      <select name="team-level" id="team-level">
+        <option value="0">Уровень 0</option>
+        <option value="1">Уровень 1</option>
+        <option value="2">Уровень 2</option>
+        <option value="3">Уровень 3</option>
+      </select>
+    </div>
+    <div class="random-result">
+      <div class="fail">
+        <span>Зрада</span>
+        20%
+      </div>
+      <div class="win">
+        <span>Перемога</span>
+        80%
+      </div>
+      <div style="display:none" class="dice">
+        <div class="front">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="back">
+            <span></span>
+        </div>
+        <div class="right">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="left">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="top">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="random-actions">
+      <button type="button">Кинуть кубики ;)</button>
+    </div>
+  </div>  
 
   <script src="src/script.js"></script>
 </body>
