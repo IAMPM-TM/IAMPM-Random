@@ -101,12 +101,16 @@ body {
     outline: 0;
     background-color: transparent;
     cursor: pointer;
-    transition: color 0.3s, background-color 0.3s;
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, .5);
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 .random-actions button:hover,
 .random-actions button:active {
   color: #008abe;
   background-color: #fff;
+}
+.random-actions button:focus {
+  box-shadow: 0 0 0 #fff;
 }
 
 /* DICE STYLES */
