@@ -48,7 +48,7 @@ class Randomizer {
 
   getChance(level) {
     if (!this.chanceMap.has(level)) return null;
-    
+
     const items = this.chanceMap.get(level);
     const index = this.getRandomNumber(items.length - 1);
     return items[index];
@@ -66,36 +66,33 @@ function calculate() {
   const result = rand.getChance(teamLevel);
 
   if (result) {
-
     setResult(result);
-    hideResult();
-    showDice();
 
-    setTimeout(function() {
-      hideDice();
-      showResult();  
+    setDisplay('result', 'none');
+    setDisplay('dice', 'block');
+
+    setTimeout(() => {
+      setDisplay('dice', 'none');
+      setDisplay('result', 'flex');
     }, 3000);
-
   }
 }
 
 function setResult(result) {
-  document.getElementById("fail").innerText = result.fail + "%";
-  document.getElementById("win").innerText = result.win + "%";
+  setResultValue('fail', result.fail + '%');
+  setResultValue('win', result.win + '%');
 }
 
-function showDice() {
-  document.getElementById("dice").style.display = "block";
+function setResultValue(id, value) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.innerHTML = value;
+  }
 }
 
-function hideDice() {
-  document.getElementById("dice").style.display = "none";
-}
-
-function showResult() {
-  document.getElementById("result").style.display = "flex";
-}
-
-function hideResult() {
-  document.getElementById("result").style.display = "none";
+function setDisplay(id, value) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.style.display = value;
+  }
 }
